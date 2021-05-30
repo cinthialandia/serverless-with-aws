@@ -13,7 +13,18 @@ plugins:
 functions:  
   todos:
     handler: src/api/todos.handler
+    events: 
+      - http: GET /api/todos
     
   todo:
     handler: src/api/todo.handler
+    events: 
+      - http: GET /api/todos/{id}
+  
+  api:
+    handler: src/api/api.handler
+    events: 
+      - http: GET /api
+
+  
     
